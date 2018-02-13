@@ -19,7 +19,7 @@ export class TeamsPage {
   teams = [
     {id: 1, name: 'HC Elite'},
     {id: 2, name: 'Team Takeover'},
-    {id: 1, name: 'DC Thunder'}
+    {id: 3, name: 'DC Thunder'}
   ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

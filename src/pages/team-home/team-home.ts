@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {StandingsPage, TeamDetailPage} from '../pages'
+import {StandingsPage, TeamDetailPage, MyTeamsPage} from '../pages'
 
 /**
  * Generated class for the TeamHomePage page.
@@ -18,14 +18,21 @@ export class TeamHomePage {
 
   teamDetailTab: any;
   standingsTab: any;
+  team: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.teamDetailTab = TeamDetailPage;
     this.standingsTab = StandingsPage;
-  }
+    this.team = this.navParams.data;
+  } 
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TeamHomePage');
+  }
+
+  goHome(){
+    //this.navCtrl.push(MyTeamsPage);
+    this.navCtrl.popToRoot();
   }
 
 }
