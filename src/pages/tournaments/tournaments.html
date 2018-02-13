@@ -5,21 +5,16 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar color='primary'>
     <ion-title>Select a Tournament</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
     <ion-list>
-      <button ion-item (click)='itemTapped()'>
-        March Madness Tournament
+      <button ion-item *ngFor="let item of tournaments" (click)='itemTapped($event, item)'>
+       {{item.name}}
       </button>
-      <button ion-item (click)='itemTapped()'>
-          Summer Showdown
-        </button>
     </ion-list>
 </ion-content>
