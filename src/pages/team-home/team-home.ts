@@ -12,12 +12,7 @@ import {StandingsPage, TeamDetailPage} from '../pages'
 @IonicPage()
 @Component({
   selector: 'page-team-home',
-  templateUrl: 'team-home.html',
-  template: `
-    <ion-tabs>
-      <ion-tab tabIcon="basketball" [root]="teamDetailTab"></ion-tab>
-      <ion-tab tabIcon="podium" [root]="standingsTab"></ion-tab>
-    </ion-tabs>`
+  templateUrl: 'team-home.html'
 })
 export class TeamHomePage {
 
